@@ -102,10 +102,11 @@ namespace Smooth.Algebraics {
 			this.value = value;
 		}
 
-		/// <summary>
-		/// If the option isSome, returns the result of someFunc applied to the option's value; otherwise, returns noneValue.
-		/// </summary>
-		public U Cata<U>(DelegateFunc<T, U> someFunc, U noneValue) { return isSome ? someFunc(value) : noneValue; }
+	
+        /// <summary>
+        /// If the option isSome, returns the result of someFunc applied to the option's value; otherwise, returns noneValue.
+        /// </summary>
+        public U Cata<U>(DelegateFunc<T, U> someFunc, U noneValue) { return isSome ? someFunc(value) : noneValue; }
 
 		/// <summary>
 		/// If the option isSome, returns the result of someFunc applied to the option's value and p; otherwise, returns noneValue.
